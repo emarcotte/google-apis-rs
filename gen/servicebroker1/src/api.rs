@@ -285,7 +285,7 @@ pub struct GoogleIamV1__Policy {
     /// If no `etag` is provided in the call to `setIamPolicy`, then the existing
     /// policy is overwritten blindly.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub etag: Option<Vec<u8>>,
     /// Deprecated.
     

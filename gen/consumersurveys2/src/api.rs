@@ -351,7 +351,7 @@ pub struct Survey {
     /// no description provided
     #[serde(rename="customerData")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub customer_data: Option<Vec<u8>>,
     /// no description provided
     
@@ -547,7 +547,7 @@ pub struct SurveyQuestionImage {
     pub alt_text: Option<String>,
     /// no description provided
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub data: Option<Vec<u8>>,
     /// no description provided
     

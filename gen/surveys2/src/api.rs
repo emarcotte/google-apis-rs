@@ -278,7 +278,7 @@ pub struct Survey {
     /// Additional information to store on behalf of the API consumer and associate with this question. This binary blob is treated as opaque. This field is limited to 64K bytes.
     #[serde(rename="customerData")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub customer_data: Option<Vec<u8>>,
     /// Text description of the survey.
     
@@ -470,7 +470,7 @@ pub struct SurveyQuestionImage {
     pub alt_text: Option<String>,
     /// Inline jpeg, gif, tiff, bmp, or png image raw bytes for an image question types.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub data: Option<Vec<u8>>,
     /// The read-only URL for the hosted images.
     

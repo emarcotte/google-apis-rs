@@ -255,7 +255,7 @@ impl client::Part for GoogleCloudDocumentaiV1beta2BoundingPoly {}
 pub struct GoogleCloudDocumentaiV1beta2Document {
     /// Optional. Inline document content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub content: Option<Vec<u8>>,
     /// A list of entities detected on Document.text. For document shards, entities in this list may cross shard boundaries.
     
@@ -690,7 +690,7 @@ impl client::Part for GoogleCloudDocumentaiV1beta2DocumentPageFormField {}
 pub struct GoogleCloudDocumentaiV1beta2DocumentPageImage {
     /// Raw byte content of the image.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub content: Option<Vec<u8>>,
     /// Height of the image in pixels.
     
@@ -806,7 +806,7 @@ pub struct GoogleCloudDocumentaiV1beta2DocumentPageMatrix {
     pub cols: Option<i32>,
     /// The matrix data.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub data: Option<Vec<u8>>,
     /// Number of rows in the matrix.
     
@@ -1332,7 +1332,7 @@ impl client::Part for GoogleCloudDocumentaiV1beta2GcsSource {}
 pub struct GoogleCloudDocumentaiV1beta2InputConfig {
     /// Content in bytes, represented as a stream of bytes. Note: As with all `bytes` fields, proto buffer messages use a pure binary representation, whereas JSON representations use base64. This field only works for synchronous ProcessDocument method.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub contents: Option<Vec<u8>>,
     /// The Google Cloud Storage location to read the input from. This must be a single file.
     #[serde(rename="gcsSource")]

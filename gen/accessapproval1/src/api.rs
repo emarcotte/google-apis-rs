@@ -546,7 +546,7 @@ pub struct SignatureInfo {
     pub google_public_key_pem: Option<String>,
     /// The digital signature.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub signature: Option<Vec<u8>>,
 }
 

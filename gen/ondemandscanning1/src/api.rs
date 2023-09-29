@@ -254,7 +254,7 @@ pub struct AttestationOccurrence {
     /// Required. The serialized payload that is verified by one or more `signatures`.
     #[serde(rename="serializedPayload")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub serialized_payload: Option<Vec<u8>>,
     /// One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
     
@@ -663,7 +663,7 @@ impl client::ResponseResult for Empty {}
 pub struct Envelope {
     /// no description provided
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub payload: Option<Vec<u8>>,
     /// no description provided
     #[serde(rename="payloadType")]
@@ -689,7 +689,7 @@ pub struct EnvelopeSignature {
     pub keyid: Option<String>,
     /// no description provided
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub sig: Option<Vec<u8>>,
 }
 
@@ -956,7 +956,7 @@ pub struct Hash {
     pub type_: Option<String>,
     /// Required. The hash value.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub value: Option<Vec<u8>>,
 }
 
@@ -1618,7 +1618,7 @@ pub struct Signature {
     pub public_key_id: Option<String>,
     /// The content of the signature, an opaque bytestring. The payload that this signature verifies MUST be unambiguously provided with the Signature during verification. A wrapper message might provide the payload explicitly. Alternatively, a message might have a canonical serialization that can always be unambiguously computed to derive the payload.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub signature: Option<Vec<u8>>,
 }
 

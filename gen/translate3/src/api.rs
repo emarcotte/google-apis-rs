@@ -470,7 +470,7 @@ impl client::Part for DetectedLanguage {}
 pub struct DocumentInputConfig {
     /// Document's content represented as a stream of bytes.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub content: Option<Vec<u8>>,
     /// Google Cloud Storage location. This must be a single file. For example: gs://example_bucket/example_file.pdf
     #[serde(rename="gcsSource")]
@@ -515,7 +515,7 @@ pub struct DocumentTranslation {
     /// The array of translated documents. It is expected to be size 1 for now. We may produce multiple translated documents in the future for other type of file formats.
     #[serde(rename="byteStreamOutputs")]
     
-    #[serde_as(as = "Option<Vec<::client::serde::urlsafe_base64::Wrapper>>")]
+    #[serde_as(as = "Option<Vec<::client::serde::standard_base64::Wrapper>>")]
     pub byte_stream_outputs: Option<Vec<Vec<u8>>>,
     /// The detected language for the input document. If the user did not provide the source language for the input document, this field will have the language code automatically detected. If the source language was passed, auto-detection of the language does not occur and this field is empty.
     #[serde(rename="detectedLanguageCode")]

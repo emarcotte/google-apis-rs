@@ -375,7 +375,7 @@ pub struct AndroidAppConfig {
     /// The contents of the JSON configuration file.
     #[serde(rename="configFileContents")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub config_file_contents: Option<Vec<u8>>,
     /// The filename that the configuration artifact for the `AndroidApp` is typically saved as. For example: `google-services.json`
     #[serde(rename="configFilename")]
@@ -602,7 +602,7 @@ pub struct IosAppConfig {
     /// The content of the XML configuration file.
     #[serde(rename="configFileContents")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub config_file_contents: Option<Vec<u8>>,
     /// The filename that the configuration artifact for the `IosApp` is typically saved as. For example: `GoogleService-Info.plist`
     #[serde(rename="configFilename")]

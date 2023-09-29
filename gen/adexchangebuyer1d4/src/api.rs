@@ -1821,7 +1821,7 @@ pub struct PrivateData {
     /// no description provided
     #[serde(rename="referencePayload")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub reference_payload: Option<Vec<u8>>,
 }
 

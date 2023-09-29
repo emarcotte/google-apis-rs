@@ -2098,7 +2098,7 @@ pub struct UpdateContactPhotoRequest {
     /// Required. Raw photo bytes
     #[serde(rename="photoBytes")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub photo_bytes: Option<Vec<u8>>,
     /// Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
     

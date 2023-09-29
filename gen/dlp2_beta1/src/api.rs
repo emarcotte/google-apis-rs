@@ -355,7 +355,7 @@ pub struct GooglePrivacyDlpV2beta1KmsWrappedCryptoKey {
     /// The wrapped data crypto key. [required]
     #[serde(rename="wrappedKey")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub wrapped_key: Option<Vec<u8>>,
     /// The resource name of the KMS CryptoKey to use for unwrapping. [required]
     #[serde(rename="cryptoKeyName")]
@@ -1453,7 +1453,7 @@ impl client::Part for GooglePrivacyDlpV2beta1EntityId {}
 pub struct GooglePrivacyDlpV2beta1UnwrappedCryptoKey {
     /// The AES 128/192/256 bit key. [required]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub key: Option<Vec<u8>>,
 }
 
@@ -2049,7 +2049,7 @@ pub struct GooglePrivacyDlpV2beta1ContentItem {
     pub table: Option<GooglePrivacyDlpV2beta1Table>,
     /// Content data to inspect or redact.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub data: Option<Vec<u8>>,
     /// Type of the content, as defined in Content-Type HTTP header.
     /// Supported types are: all "text" types, octet streams, PNG images,

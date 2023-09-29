@@ -609,7 +609,7 @@ pub struct DictionaryAnnotationdata {
     /// Base64 encoded data for this annotation data.
     #[serde(rename="encodedData")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub encoded_data: Option<Vec<u8>>,
     /// Unique id for this annotation data.
     
@@ -825,7 +825,7 @@ pub struct GeoAnnotationdata {
     /// Base64 encoded data for this annotation data.
     #[serde(rename="encodedData")]
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub encoded_data: Option<Vec<u8>>,
     /// Unique id for this annotation data.
     

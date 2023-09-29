@@ -1042,7 +1042,7 @@ pub struct Policy {
     pub bindings: Option<Vec<PolicyBindings>>,
     /// HTTP 1.1  Entity tag for the policy.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub etag: Option<Vec<u8>>,
     /// The kind of item this is. For policies, this is always storage#policy. This field is ignored on input.
     

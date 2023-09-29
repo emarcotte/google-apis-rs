@@ -621,7 +621,7 @@ pub struct GoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest {
     /// 130x130 pixels and the maximum dimensions are 10000x10000 pixels.
     /// Required.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub icon: Option<Vec<u8>>,
 }
 
@@ -979,7 +979,7 @@ pub struct GoogleIamV1Policy {
     /// you to overwrite a version `3` policy with a version `1` policy, and all of
     /// the conditions in the version `3` policy are lost.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub etag: Option<Vec<u8>>,
     /// Specifies the format of the policy.
     /// 

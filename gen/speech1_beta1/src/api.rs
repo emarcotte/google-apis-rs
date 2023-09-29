@@ -395,7 +395,7 @@ pub struct RecognitionAudio {
     /// `RecognitionConfig`. Note: as with all bytes fields, protobuffers use a
     /// pure binary representation, whereas JSON representations use base64.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub content: Option<Vec<u8>>,
 }
 

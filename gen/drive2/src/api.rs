@@ -3029,7 +3029,7 @@ impl client::Part for FileShortcutDetails {}
 pub struct FileThumbnail {
     /// The URL-safe Base64 encoded bytes of the thumbnail image. It should conform to RFC 4648 section 5.
     
-    #[serde_as(as = "Option<::client::serde::urlsafe_base64::Wrapper>")]
+    #[serde_as(as = "Option<::client::serde::standard_base64::Wrapper>")]
     pub image: Option<Vec<u8>>,
     /// The MIME type of the thumbnail.
     #[serde(rename="mimeType")]
